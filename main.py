@@ -13,6 +13,7 @@ sharpened = cv2.filter2D(image, -2, kernel)
 cv2.imshow('Natija', sharpened)
 
 cv2.imwrite('Natija.jpg', sharpened)
-
+#Bu commit
+#bu esa 2-commit
 cv2.waitKey(0)
 cv2.destroyAllWindows()
