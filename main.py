@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-
+'''retinex(msrcr) algoritmi yomon yoritilgan tasvirlarni yaxshilash uchun'''
 def single_scale_retinex(img, sigma):
     img = img.astype(np.float32) + 1.0
     retinex = np.log10(img) - np.log10(cv2.GaussianBlur(img, (0, 0), sigmaX=sigma))
