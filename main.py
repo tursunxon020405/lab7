@@ -6,8 +6,7 @@ def single_scale_retinex(img, sigma):
     img = img.astype(np.float32) + 1.0
     retinex = np.log10(img) - np.log10(cv2.GaussianBlur(img, (0, 0), sigmaX=sigma))
     return retinex
-#Bu uchinchi yulash uchun yozilgan izoh
-#bu 4-yuklash uchun yozilgan izoh
+
 def multi_scale_retinex(img, sigmas):
     retinex = np.zeros_like(img, dtype=np.float32)
     for sigma in sigmas:
@@ -20,7 +19,7 @@ def color_restoration(img, alpha, beta):
     img_sum[img_sum == 0] = 1  # Avoid division by zero
     color_restoration = beta * (np.log10(alpha * img) - np.log10(img_sum))
     return color_restoration
-
+#jdcdghg
 def simplest_color_balance(img, low_clip, high_clip):
     result = np.zeros_like(img)
     for i in range(img.shape[2]):  # Color balance each channel
