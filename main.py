@@ -6,7 +6,7 @@ def single_scale_retinex(img, sigma):
     img = img.astype(np.float32) + 1.0
     retinex = np.log10(img) - np.log10(cv2.GaussianBlur(img, (0, 0), sigmaX=sigma))
     return retinex
-
+#jkgdfjg
 def multi_scale_retinex(img, sigmas):
     retinex = np.zeros_like(img, dtype=np.float32)
     for sigma in sigmas:
